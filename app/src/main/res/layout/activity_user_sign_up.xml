@@ -1,0 +1,342 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile" />
+
+    <include
+        android:id="@+id/fbAreaInclude"
+        layout="@layout/login_fb_area_design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_include"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp" />
+
+    <!--<ImageView
+        android:id="@+id/btn_facebook"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_include"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="#3D5A98"
+        android:clickable="true"
+        android:onClick="loginWithFacebook"
+        android:paddingBottom="5dp"
+        android:src="@drawable/facebook" />-->
+
+    <RelativeLayout
+        android:id="@+id/or_strip_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fbAreaInclude"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:padding="5dp">
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/or_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="OR"
+            android:textColor="#333"
+            android:textSize="10sp" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/left_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/or_txt"
+            android:background="#CECECE" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/right_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/or_txt"
+            android:background="#CECECE" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_main_area"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/or_strip_layout">
+
+        <RelativeLayout
+            android:id="@+id/detail_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/name_area_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.materialedittext.MaterialEditText
+                    android:id="@+id/First_Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:singleLine="true"
+                    android:theme="@style/bg_materialEditText"
+                    app:met_accentTypeface="@string/Label_value_input_typeFace"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_typeface="@string/Label_value_input_typeFace" />
+
+                <com.materialedittext.MaterialEditText
+                    android:id="@+id/Last_Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:singleLine="true"
+                    android:theme="@style/bg_materialEditText"
+                    app:met_accentTypeface="@string/Label_value_input_typeFace"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_typeface="@string/Label_value_input_typeFace" />
+            </LinearLayout>
+
+            <com.materialedittext.MaterialEditText
+                android:id="@+id/email_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_area_layout"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:layout_marginTop="5dp"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:theme="@style/bg_materialEditText"
+                app:met_accentTypeface="@string/Label_value_input_typeFace"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_typeface="@string/Label_value_input_typeFace" />
+
+            <LinearLayout
+                android:id="@+id/genderArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_address"
+                android:orientation="horizontal">
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/genderHTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0"
+                    android:textColor="@color/Label_color"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/genderSelection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                    android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/maleRadioBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/femaleRadioBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mobile_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genderArea"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:layout_marginTop="5dp">
+
+                <com.materialedittext.MaterialEditText
+                    android:id="@+id/countryCode_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:singleLine="true"
+                    android:theme="@style/bg_materialEditText"
+                    app:met_accentTypeface="@string/Label_value_input_typeFace"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_country"
+                    app:met_iconPadding="2dp"
+                    app:met_typeface="@string/Label_value_input_typeFace" />
+
+                <com.materialedittext.MaterialEditText
+                    android:id="@+id/mobile_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.65"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:singleLine="true"
+                    android:theme="@style/bg_materialEditText"
+                    app:met_accentTypeface="@string/Label_value_input_typeFace"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_phone"
+                    app:met_iconPadding="5dp"
+                    app:met_typeface="@string/Label_value_input_typeFace" />
+            </LinearLayout>
+
+            <com.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile_area"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:layout_marginTop="5dp"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:theme="@style/bg_materialEditText"
+                app:met_accentTypeface="@string/Label_value_input_typeFace"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_typeface="@string/Label_value_input_typeFace" />
+
+            <com.materialedittext.MaterialEditText
+                android:id="@+id/Repassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:layout_marginTop="5dp"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:theme="@style/bg_materialEditText"
+                app:met_accentTypeface="@string/Label_value_input_typeFace"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_typeface="@string/Label_value_input_typeFace" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/select_language_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Repassword"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text_border_registration"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/registration_arrow_down_language"
+                android:gravity="left|center_vertical"
+                android:hint="Select Language"
+                android:minHeight="55dp"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <com.materialedittext.MaterialEditText
+                android:id="@+id/inviteCodeEditBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_language_box"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/material_edittext_left_right_margin"
+                android:layout_marginRight="@dimen/material_edittext_left_right_margin"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:theme="@style/bg_materialEditText"
+                app:met_accentTypeface="@string/Label_value_input_typeFace"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_iconPadding="5dp"
+                app:met_typeface="@string/Label_value_input_typeFace" />
+
+            <com.hwindiapp.passenger.RippleStyleButton
+                android:id="@+id/Next_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inviteCodeEditBox"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/btn_bg_color"
+                android:minHeight="55dp"
+                android:text="NEXT"
+                android:textColor="@color/btn_txt_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- android:background="@drawable/spin_navigate_selector" -->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

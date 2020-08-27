@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/password_dialog_background"
+        android:orientation="vertical" >
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/title_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#333"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="Select Country"
+            android:textColor="#F2F2F2"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <com.fonts.Text.MyEditText
+            android:id="@+id/search_country"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="Enter Country"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/text_white"
+            android:textColorHint="@color/text_hint"/>
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/bottom_strip_search_country"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="#CECECE" />
+
+        <ListView
+            android:id="@+id/country_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:divider="#333"
+            android:dividerHeight="1dp"
+            android:visibility="gone" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/loading_country_codes"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/problem_country_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Please try again later."
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

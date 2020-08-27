@@ -1,0 +1,358 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#CECECE"
+    android:gravity="center">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile" />
+
+
+    <RelativeLayout
+        android:id="@+id/container_ratingBar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar_include">
+
+        <RelativeLayout
+            android:id="@+id/back_area_fare_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/time_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/strip_time_rating"
+                android:drawableRight="@drawable/strip_time_rating"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="  OCTOMBER 29 2014 at 8:48 AM  "
+                android:textColor="#5a5a5a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/fareArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_area"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/fare_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="70dp"
+                    android:text="$"
+                    android:textColor="#292929"
+                    android:textSize="60sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/discountValueTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="$"
+                    android:textColor="#292929"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/fare_loading_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/time_area"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8dp"
+                android:background="#CECECE"
+                android:gravity="center" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/trip_summary_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fareArea"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/strip_fare_summary"
+                android:drawablePadding="15dp"
+                android:drawableRight="@drawable/strip_fare_summary"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=" TRIP SUMMARY "
+                android:textColor="#5a5a5a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back_area_fare_txt"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.hwindiapp.passenger.RoundedImageView
+                android:id="@+id/img_car"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/trip_summary_img_border" />
+
+            <com.hwindiapp.passenger.RoundedImageView
+                android:id="@+id/img_user"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img_car"
+                android:background="@drawable/trip_summary_img_border" />
+
+            <RelativeLayout
+                android:id="@+id/txt_img_map_area"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img_user"
+                android:background="@android:color/transparent"
+                android:gravity="center">
+
+                <com.hwindiapp.passenger.RoundedImageView
+                    android:id="@+id/img_map"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/trip_summary_img_border" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/txt_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    android:paddingBottom="2dp"
+                    android:text="AHMEDABAD"
+                    android:textColor="#000000"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/txt_payment_failed_area"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_above="@+id/trip_bottom_border"
+            android:layout_below="@+id/back_area_fare_txt"
+            android:background="@drawable/driver_map_page_txt_back"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/payment_failed_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="payment failed"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/trip_bottom_border"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_below="@+id/image_area"
+            android:background="@drawable/trip_bottom_border" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/trip_cancel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/link_txt_back"
+            android:gravity="center"
+            android:layout_below="@+id/trip_bottom_border"
+            android:padding="5dp"
+            android:textColorHint="@color/text_white"
+            android:textColor="@color/text_white"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/txt_trip_number_area"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/trip_cancel_txt"
+            android:alpha="0.5"
+            android:background="@drawable/driver_map_page_txt_back"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/trip_number_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Trip Number"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ratingBar_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/txt_trip_number_area"
+            android:background="@drawable/rating_bar_btn_area_back"
+            android:gravity="center_horizontal"
+            android:visibility="visible">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/link_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/link_txt_back"
+                android:gravity="center"
+                android:hint="Leave a Comment"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="10dp"
+                android:textColorHint="@color/text_white"
+                android:textColor="@color/text_white" />
+
+            <RatingBar
+                android:id="@+id/ratingbar_default_1"
+                style="@style/foodRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/link_comment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:stepSize="1.0" />
+
+            <com.hwindiapp.passenger.RippleStyleButton
+                android:id="@+id/btn_usr_to_driver_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/ratingbar_default_1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/btn_bg_color"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="@color/btn_txt_color"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/payment_btn_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/txt_trip_number_area"
+            android:background="@drawable/rating_bar_btn_area_back"
+            android:gravity="center_horizontal">
+
+            <com.hwindiapp.passenger.RippleStyleButton
+                android:id="@+id/btn_payment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/btn_bg_color"
+                android:clickable="false"
+                android:gravity="center"
+                android:onClick="StartPaymentProcedure"
+                android:text="Pay"
+                android:textColor="@color/btn_txt_color"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ratings_done_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/txt_trip_number_area"
+            android:background="@drawable/rating_bar_btn_area_back"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/trip_not_verified_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/link_txt_back"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="10dp"
+                android:text="Your trip is not verified by driver."
+                android:textColor="@color/text_white"
+                android:textSize="18sp" />
+
+            <com.hwindiapp.passenger.RippleStyleButton
+                android:id="@+id/btn_CheckVerificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/trip_not_verified_txt"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/btn_bg_color"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="CheckVerificationCode"
+                android:text="Finish Your Trip"
+                android:textColor="@color/btn_txt_color"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+
+        <com.fonts.Text.MyEditText
+            android:id="@+id/comment_usr_to_driver"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Write any Comment"
+            android:textColor="#CC00CC"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

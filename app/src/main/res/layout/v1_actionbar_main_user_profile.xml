@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/driver_page_your_logo_back"
+        app:contentInsetLeft="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+            <RelativeLayout
+                android:id="@+id/header_area"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:clickable="true" >
+
+                <ImageView
+                    android:id="@+id/header_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/your_logo_txt" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/confirm_source_text_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/back_navigation"
+                    android:padding="5dp"
+                    android:text="CONFIRMATION"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/select_destination_text_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/back_navigation_frm_destination"
+                    android:padding="5dp"
+                    android:text="Select Destination"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/driving_status_text_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/img_navigation_drawer"
+                    android:padding="5dp"
+                    android:text="ARRIVING"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/Confirm_destination_text_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/back_navigation_frm_confirm_destination"
+                    android:padding="5dp"
+                    android:text="Comfirm Your Destination"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/back_navigation"
+                    android:layout_width="10mm"
+                    android:layout_height="7mm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/navigation_back"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/back_navigation_frm_destination"
+                    android:layout_width="10mm"
+                    android:layout_height="7mm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:clickable="true"
+                    android:src="@drawable/navigation_back"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/back_navigation_frm_confirm_destination"
+                    android:layout_width="10mm"
+                    android:layout_height="7mm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/navigation_back"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_navigation_drawer"
+                    android:layout_width="7mm"
+                    android:layout_height="7mm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="-0.8mm"
+                    android:layout_marginTop="2dp"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:src="@drawable/actionbar_profile_btn_pressed" />
+            </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

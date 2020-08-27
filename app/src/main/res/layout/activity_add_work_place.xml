@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F4" >
+    
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/hint_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:alpha="0.4"
+        android:background="#000000"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar_include"
+        android:text="Long touch on map to change location"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <fragment
+        android:id="@+id/mapV2_add_home_place"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/hint_txt" />
+
+    <com.dd.ShadowLayout
+        android:id="@+id/shadow_area"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/hint_txt"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        app:sl_cornerRadius="2dp"
+        app:sl_dx="1dp"
+        app:sl_dy="1dp"
+        app:sl_shadowColor="#AA000000" >
+
+        <com.fonts.Text.ClearableEditText
+            android:id="@+id/AddHomePlace_editBox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_add_place"
+            android:drawableLeft="@drawable/home_place"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Enter work location"
+            android:singleLine="true" />
+        <!--
+             <AutoCompleteTextView
+            android:id="@+id/autocomplete_places"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:singleLine="true"
+            android:background="@drawable/bg_add_place"
+            android:drawableLeft="@drawable/home_place"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Enter home location" />
+        -->
+    </com.dd.ShadowLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/shadow_area"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/powered_by_google_light" />
+
+    <com.hwindiapp.passenger.RippleStyleButton
+        android:id="@+id/add_work_place_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/btn_bg_color"
+        android:text="Add Place"
+        android:textColor="@color/btn_txt_color"
+        android:textSize="20dp" />
+
+</RelativeLayout>

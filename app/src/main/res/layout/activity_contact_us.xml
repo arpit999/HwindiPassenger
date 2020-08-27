@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+    
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+
+   <!--  <RelativeLayout
+        android:id="@+id/header_area"
+        android:layout_width="fill_parent"
+        android:layout_height="8.4mm"
+        android:background="@drawable/driver_page_your_logo_back" >
+
+        <ImageView
+            android:id="@+id/back_navigation"
+            android:layout_width="10mm"
+            android:layout_height="7mm"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/navigation_back" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/back_navigation"
+            android:text="Contact Us"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout> -->
+
+    <LinearLayout
+        android:id="@+id/contact_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_query_btn"
+        android:layout_below="@+id/toolbar_include"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/Contact_header_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Please add below details."
+            android:textColor="#1C1C1C"
+            android:textSize="18sp" />
+        
+        <com.fonts.Text.MyEditText
+            android:id="@+id/subject_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="left"
+            android:minHeight="40dp"
+            android:maxHeight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:textColor="#1C1C1C"
+            android:textSize="16sp" />
+
+        <com.fonts.Text.MyEditText
+            android:id="@+id/content_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="left"
+            android:minHeight="150dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:textColor="#1C1C1C"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.hwindiapp.passenger.RippleStyleButton
+        android:id="@+id/send_query_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/btn_bg_color"
+        android:minHeight="55dp"
+        android:text="Send Query"
+        android:textColor="@color/btn_txt_color"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

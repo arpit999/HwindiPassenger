@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#E6F8F8FF" >
+
+    <RelativeLayout
+        android:id="@+id/taxiSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:padding="10dp" >
+
+        <com.infteh.comboseekbar.ComboSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:multiline="false"
+            app:myColor="#d6d6d6"
+            app:thumbColor="#c0c0c0"
+            app:selectedTxtColor="#333"
+            app:txtColor="#5b5b5b"
+            app:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_area_taxi_selection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taxiSelectionLayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/taxi_selection_drawer_cell_shape" >
+
+        <LinearLayout
+            android:id="@+id/first_row"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/time_area"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/txt_time_eta_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="eta"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/txt_time_eta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_time_eta_header"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bg_line_vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="#333" />
+
+            <RelativeLayout
+                android:id="@+id/person_size_area"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/txt_size_person_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Max. Size"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/txt_size_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_size_person_header"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bg_line_horizontal1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/first_row"
+            android:background="#333" />
+
+        <RelativeLayout
+            android:id="@+id/min_fare_area"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/bg_line_horizontal1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="openFarDetailDialog"
+            android:padding="5dp" >
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/txt_min_fare_header"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Min. Fare"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/txt_min_fare_value"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/txt_min_fare_header"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bg_line_horizontal2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/min_fare_area"
+            android:background="#333" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/txt_btn_get_fare_estimate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/bg_line_horizontal2"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="FareEstimateCalcluate"
+            android:padding="5dp"
+            android:text="Get Fare Estimate"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

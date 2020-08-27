@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_include"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/img_user_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#CECECE"
+                android:minHeight="120dp">
+
+                <com.hwindiapp.passenger.RoundedImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/friends_main" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/relative_update"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/Name_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.materialedittext.MaterialEditText
+                        android:id="@+id/firstNameEditBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:minHeight="40dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:theme="@style/bg_materialEditText"
+                        app:met_accentTypeface="@string/Label_value_input_typeFace"
+                        app:met_clearButton="true"
+                        app:met_floatingLabel="highlight"
+                        app:met_typeface="@string/Label_value_input_typeFace" />
+
+
+                    <com.materialedittext.MaterialEditText
+                        android:id="@+id/lastNameEditBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:minHeight="40dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:theme="@style/bg_materialEditText"
+                        app:met_accentTypeface="@string/Label_value_input_typeFace"
+                        app:met_clearButton="true"
+                        app:met_floatingLabel="highlight"
+                        app:met_typeface="@string/Label_value_input_typeFace" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/mobile_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <com.materialedittext.MaterialEditText
+                        android:id="@+id/countryCode_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:minHeight="40dp"
+                        android:layout_marginRight="5dp"
+                        android:singleLine="true"
+                        android:theme="@style/bg_materialEditText"
+                        app:met_accentTypeface="@string/Label_value_input_typeFace"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconPadding="2dp"
+                        app:met_typeface="@string/Label_value_input_typeFace" />
+
+                    <com.materialedittext.MaterialEditText
+                        android:id="@+id/edit_userPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.65"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:layout_marginLeft="5dp"
+                        android:minHeight="40dp"
+                        android:singleLine="true"
+                        android:theme="@style/bg_materialEditText"
+                        app:met_accentTypeface="@string/Label_value_input_typeFace"
+                        app:met_clearButton="true"
+                        app:met_floatingLabel="highlight"
+                        app:met_iconPadding="5dp"
+                        app:met_typeface="@string/Label_value_input_typeFace" />
+                </LinearLayout>
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/genderHTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/Label_color"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/genderSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/maleRadioBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/femaleRadioBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/birthDateHTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/Label_color"
+                    android:textSize="16sp" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/birthDateTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#FFFFFF"
+                    android:drawableLeft="@mipmap/ic_calendar"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/birthDateErrorTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#E7482D"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/currencyHTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/update_info_btn"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/Label_color"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/update_currency_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/currencyHTxt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_border_registration"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/registration_arrow_down_language"
+                    android:gravity="left|center_vertical"
+                    android:hint="Select Currency"
+                    android:minHeight="55dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+
+                <com.hwindiapp.passenger.RippleStyleButton
+                    android:id="@+id/update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/btn_bg_color"
+                    android:minHeight="55dp"
+                    android:padding="15dp"
+                    android:text="Update Information"
+                    android:textColor="@color/btn_txt_color"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

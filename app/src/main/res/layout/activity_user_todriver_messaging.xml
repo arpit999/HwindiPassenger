@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#FFFFFF">
+    
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+    
+   <!--  <RelativeLayout
+        android:id="@+id/header_area"
+        android:layout_width="fill_parent"
+        android:layout_height="8.4mm"
+        android:isScrollContainer="false"
+        android:background="@drawable/driver_page_your_logo_back" >
+
+        <ImageView
+            android:id="@+id/back_navigation"
+            android:layout_width="10mm"
+            android:layout_height="7mm"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/navigation_back" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/back_navigation"
+            android:text="Messaging"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout> -->
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/time_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/toolbar_include"
+        android:drawableLeft="@drawable/strip_time_rating"
+        android:drawableRight="@drawable/strip_time_rating"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="  OCTOMBER 29 2014 at 8:48 AM  "
+        android:textColor="#000000"
+        android:isScrollContainer="false"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/writeCmtArea"
+        android:layout_below="@+id/time_area"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/writeCmtArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <com.fonts.Text.MyEditText
+            android:id="@+id/write_comment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_toLeftOf="@+id/sendCmt_btn"
+            android:hint="Write Comment"
+            android:maxLines="1" />
+
+        <com.hwindiapp.passenger.RippleStyleButton
+            android:id="@+id/sendCmt_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btn_bg_color"
+            android:textColor="@color/btn_txt_color"
+            android:text="Send" />
+    </RelativeLayout>
+
+</RelativeLayout>

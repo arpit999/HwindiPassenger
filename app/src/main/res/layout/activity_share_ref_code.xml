@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hwindiapp.passenger.ShareRefCodeActivity">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile" />
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="@color/Label_color"
+        android:textSize="18sp" />
+
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/subTitleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="#333"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/invite_round_view"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/inviteLabelTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/separationLine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/separationLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#333" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/inviteLabelSmallTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separationLine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="5216116"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/refCodeTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="#9A9A9A"
+            android:textSize="16sp" />
+
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/refCodeValueTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0"
+            android:gravity="left"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <com.hwindiapp.passenger.RippleStyleButton
+        android:id="@+id/refer_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@color/btn_bg_color"
+        android:padding="10dp"
+        android:text="REFER NOW"
+        android:textColor="@color/btn_txt_color"
+        android:textSize="20dp" />
+
+    <com.hwindiapp.passenger.RippleStyleButton
+        android:id="@+id/refer_fb_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@color/btn_bg_color"
+        android:padding="10dp"
+        android:text="REFER Via FACEBOOK"
+        android:textColor="@color/btn_txt_color"
+        android:textSize="20dp" />
+
+</LinearLayout>

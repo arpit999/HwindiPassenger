@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+
+    <com.dd.ShadowLayout
+        android:id="@+id/shadow_area"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/toolbar_include"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        app:sl_cornerRadius="2dp"
+        app:sl_dx="1dp"
+        app:sl_dy="1dp"
+        app:sl_shadowColor="#AA000000" >
+
+        <com.fonts.Text.ClearableEditText
+            android:id="@+id/selectDestination_editBox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_add_place"
+            android:drawableLeft="@drawable/ic_location_point"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Enter Destination"
+            android:singleLine="true" />
+    </com.dd.ShadowLayout>
+
+    <ImageView
+        android:id="@+id/fare_loader_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shadow_area"
+        android:visibility="invisible" >
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/start_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/source_back"
+            android:drawableLeft="@drawable/green_source"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical|left"
+            android:minHeight="50dp"
+            android:paddingLeft="10dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/sub_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/end_location"
+            android:layout_below="@+id/start_location"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" >
+
+            <TableLayout
+                android:id="@+id/fair_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:stretchColumns="1,1" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/txt_base_fare_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Base Fare"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/txt_base_fare_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="BSF"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/txt_distance_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_email_member"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="miles"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/txt_distance_money_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="money"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/txt_minutes_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_email_member"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="minutes"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/txt_minutes_money_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="money"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/money_value_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fair_area"
+                android:layout_marginTop="5dp"
+                android:gravity="left|center_vertical"
+                android:minHeight="25dp"
+                android:text="Fare"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <fragment
+                android:id="@+id/mapV2_fare_calculation"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/money_value_txt"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/end_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/source_back"
+            android:drawableLeft="@drawable/end_point_red"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical|left"
+            android:minHeight="50dp"
+            android:paddingLeft="10dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:alpha="0.8"
+    android:background="#F2F2F4" >
+    
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+
+    <!-- android:background="@drawable/driver_enter_destination_page_back" -->
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/hint_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:alpha="0.4"
+        android:layout_below="@+id/toolbar_include"
+        android:background="#333"
+        android:gravity="center"
+        android:text="Long touch on map to change location"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <fragment
+        android:id="@+id/mapV2_add_home_place"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/hint_txt" />
+
+    <com.fonts.Text.ClearableEditText
+        android:id="@+id/select_destination_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hint_txt"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2mm"
+        android:background="@drawable/enter_destination_editext_back"
+        android:drawableLeft="@drawable/destination_search_edittext_left"
+        android:drawablePadding="20dp"
+        android:drawableStart="@drawable/destination_search_edittext_left"
+        android:gravity="center_vertical"
+        android:hint="Search Place"
+        android:paddingLeft="12dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="4"
+        android:singleLine="true"
+        android:textColor="@color/white_color"
+        android:textColorHint="@color/text_hint"/>
+
+    <ImageView
+        android:id="@+id/powerByGoogle_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/select_destination_location"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/powered_by_google_light" />
+
+    <RelativeLayout
+        android:id="@+id/area_selected_home_work_place"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/powerByGoogle_img"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_border_destination_selection_places"
+        android:visibility="gone" >
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/homePlace"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/home_place"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Add Home"
+            android:textColor="#333"
+            android:textSize="18dp"
+            android:visibility="gone" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/strip_separation"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/homePlace"
+            android:layout_marginTop="1dp"
+            android:background="#C2C2C5"
+            android:visibility="gone" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/workPlace"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/strip_separation"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/work_place"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Add Work Place"
+            android:textColor="#333"
+            android:textSize="18dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/searchBoxProgressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="4mm" />
+
+    <RelativeLayout
+        android:id="@+id/layout_dest_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_destination_location"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/dest_line"
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/driver_destination_line" />
+
+        <ImageView
+            android:id="@+id/dest_line_circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/dest_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/driver_destination_circle" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/arrival_time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dest_line_circle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="KNOW YOUR ARRIVAL TIME"
+            android:textColor="#333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.hwindiapp.passenger.RippleStyleButton
+        android:id="@+id/add_destination_place_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/btn_bg_color"
+        android:text="Add Destination"
+        android:textColor="@color/btn_txt_color"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

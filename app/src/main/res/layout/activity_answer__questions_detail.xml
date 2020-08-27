@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2" >
+
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+    
+    <com.fonts.Text.MyTextView
+        android:id="@+id/txt_header_question"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:minHeight="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/toolbar_include"
+        android:paddingTop="10dp"
+        android:text="Question"
+        android:textColor="#333"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/txt_answer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/txt_header_question"
+        android:gravity="left|right"
+        android:lineSpacingExtra="1mm"
+        android:text="Description"
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <!--
+         <ScrollView
+        android:id="@+id/scroll_answer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/txt_answer"
+        android:layout_marginTop="15dp"
+        android:background="#f2f2f2"
+        android:scrollbars="none"
+        android:paddingBottom="2mm"
+        android:paddingLeft="2mm"
+        android:paddingRight="2mm" >
+    -->
+
+    <LinearLayout
+        android:id="@+id/linear_answer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/txt_header_question"
+        android:paddingBottom="2mm"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="2mm"
+        android:paddingRight="2mm" >
+    </LinearLayout>
+    <!-- </ScrollView> -->
+
+</RelativeLayout>

@@ -1,0 +1,433 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile" />
+
+
+    <ScrollView
+        android:id="@+id/profile_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar_include"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/profile_area"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:id="@+id/img_user_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#CECECE"
+                android:minHeight="120dp">
+
+                <RelativeLayout
+                    android:id="@+id/imgContainerArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <com.hwindiapp.passenger.RoundedImageView
+                        android:id="@+id/user_image_area"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/friends_main" />
+
+                    <ImageView
+                        android:id="@+id/img_edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@+id/user_image_area"
+                        android:src="@drawable/icon_edit_profile_img" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profile_detail_area"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/img_user_area"
+                android:layout_marginTop="5dp"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/user_img_detail_area_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/txt_detail_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <LinearLayout
+                            android:id="@+id/Name_area"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/first_name_area"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1">
+
+                                <com.fonts.Text.MyTextView
+                                    android:id="@+id/firstName_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="FIRST NAME"
+                                    android:textColor="@color/Label_color"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <com.fonts.Text.MyTextView
+                                    android:id="@+id/first_name_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/firstName_header"
+                                    android:layout_marginLeft="6dp"
+                                    android:background="#00000000"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/last_name_area"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1">
+
+                                <com.fonts.Text.MyTextView
+                                    android:id="@+id/lastName_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="LAST NAME"
+                                    android:textColor="@color/Label_color"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <com.fonts.Text.MyTextView
+                                    android:id="@+id/last_name_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/lastName_header"
+                                    android:layout_marginLeft="6dp"
+                                    android:background="#00000000"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/user_Email_area"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Name_area"
+                            android:layout_marginTop="10dp">
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/Email_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="EMAIL"
+                                android:textColor="@color/Label_color"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/user_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_below="@+id/Email_header"
+                                android:layout_marginLeft="6dp"
+                                android:background="#00000000"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/user_mobile_area"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_Email_area"
+                            android:layout_marginTop="10dp">
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/Mobile_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MOBILE"
+                                android:textColor="@color/Label_color"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:id="@+id/mobileNumValue_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/Mobile_header"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <com.fonts.Text.MyTextView
+                                    android:id="@+id/countryCode_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="0"
+                                    android:gravity="center_vertical"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+
+                                <com.fonts.Text.MyTextView
+                                    android:id="@+id/user_mobile"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="#00000000"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/user_ReferralCode_area"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_mobile_area"
+                            android:layout_marginTop="10dp">
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/referralCode_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/Label_color"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/referralCodeTXT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/referralCode_header"
+                                android:layout_marginLeft="6dp"
+                                android:background="#00000000"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:minHeight="30dp"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/user_ReferralPoints_area"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_below="@+id/user_ReferralCode_area"
+                            android:layout_marginTop="10dp">
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/referralPoints_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/Label_color"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+
+                            <com.fonts.Text.MyTextView
+                                android:id="@+id/referralPointsTXT"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_below="@+id/referralPoints_header"
+                                android:layout_marginLeft="6dp"
+                                android:background="#00000000"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.hwindiapp.passenger.RippleStyleButton
+                    android:id="@+id/update_info_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/user_img_detail_area_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/btn_bg_color"
+                    android:gravity="center"
+                    android:minHeight="55dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Update Profile Information"
+                    android:textColor="@color/btn_txt_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/currencyHTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/update_info_btn"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/Label_color"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/update_currency_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/currencyHTxt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_border_registration"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/registration_arrow_down_language"
+                    android:gravity="left|center_vertical"
+                    android:hint="Select Currency"
+                    android:minHeight="55dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/languageHTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/update_currency_box"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/Label_color"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/update_language_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/languageHTxt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_border_registration"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/registration_arrow_down_language"
+                    android:gravity="left|center_vertical"
+                    android:hint="Select Language"
+                    android:minHeight="55dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/work_homeLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/update_language_box"
+                    android:layout_marginTop="10dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/places_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PLACES"
+                        android:textColor="@color/Label_color"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/homePlace"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="1dp"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/home_place"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Home"
+                        android:textColor="#333"
+                        android:textSize="18dp" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/strip_separation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="1dp"
+                        android:background="#CECECE" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/workPlace"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="1dp"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/work_place"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Add Work Place"
+                        android:textColor="#333"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

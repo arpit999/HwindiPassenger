@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/trip_start_header_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_trip_start_header"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/source_area_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/header_source_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/green_source"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="15dp"
+                android:shadowColor="#ffffff"
+                android:shadowDx="2"
+                android:shadowDy="4"
+                android:singleLine="true" />
+
+            <!-- <Button
+                android:id="@+id/trip_start_add_dest_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/float_button"
+                android:onClick="trip_start_dest_choose_btn"
+                android:visibility="visible" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/destination_area_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/source_area_container"
+            android:visibility="gone">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/trip_start_dest_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/end_point_red"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="15dp"
+                android:shadowColor="#ffffff"
+                android:shadowDx="2"
+                android:shadowDy="4"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/addDestinationTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/destination_area_container"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/source_back"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/end_point_red"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="15dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="2"
+            android:shadowDy="4"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

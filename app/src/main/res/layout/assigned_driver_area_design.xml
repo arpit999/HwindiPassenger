@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/driver_detail_layout_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/subTop_one"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp" >
+
+                <com.fonts.Text.MyTextView
+                    android:id="@+id/slideUpFor_detail_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cecece"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Slide Up for detail"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subTop_two"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/subTop_one"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/driver_detail_name_carType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/driver_img_area" >
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/driver_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/driver_car_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/driver_name"
+                        android:paddingTop="2dp"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/driver_img_area"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true" >
+
+                    <com.hwindiapp.passenger.RoundedImageView
+                        android:id="@+id/driver_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <RelativeLayout
+                        android:id="@+id/rating_driver_area"
+                        android:layout_width="70dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/driver_img"
+                        android:layout_marginTop="-10dp"
+                        android:background="#cecece" >
+
+                        <ImageView
+                            android:id="@+id/star_rating_img"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_star" />
+
+                        <com.fonts.Text.MyTextView
+                            android:id="@+id/txt_rating"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/star_rating_img"
+                            android:gravity="center"
+                            android:text="2.0"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/driver_car_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/driver_img_area" >
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/driver_car_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <com.fonts.Text.MyTextView
+                        android:id="@+id/driver_car_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/driver_car_name"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/numberPlateArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/driver_car_model"
+                        android:layout_marginRight="5dp"
+                        android:background="#BBBBC0" >
+
+                        <ImageView
+                            android:id="@+id/car_ic"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="#F2F2F2"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:src="@drawable/ic_car_go" />
+
+                        <com.fonts.Text.MyTextView
+                            android:id="@+id/numberPlate_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/car_ic"
+                            android:paddingLeft="5dp"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_contact_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#CECECE"
+            android:clickable="true" >
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/contact_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_share_status"
+                android:drawablePadding="5dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="Contact"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/btn_share_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#CECECE"
+            android:clickable="true"
+            android:visibility="gone" >
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/share_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_share_status"
+                android:drawablePadding="5dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="Share Status"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        
+         <LinearLayout
+            android:id="@+id/subBtnDetail_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_contact_container"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" 
+            android:orientation="horizontal">
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/btn_share_txt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_share_status"
+                android:gravity="center"
+                android:maxEms="12"
+                android:text="Share Status"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/btn_cancle_trip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_trip_cancel"
+                android:gravity="center"
+                android:maxEms="11"
+                android:text="Cancel trip"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/btn_message_driver"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_chat"
+                android:gravity="center"
+                android:text="Chat"
+                android:visibility="gone"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+       <!--  <RelativeLayout
+            android:id="@+id/detail_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_contact_container"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/btn_share_txt"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_share_status"
+                android:gravity="center"
+                android:maxEms="12"
+                android:text="Share Status"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/btn_cancle_trip"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn_share_txt"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_trip_cancel"
+                android:gravity="center"
+                android:maxEms="11"
+                android:text="Cancel trip"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <com.fonts.Text.MyTextView
+                android:id="@+id/btn_message_driver"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn_cancle_trip"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_chat"
+                android:gravity="center"
+                android:text="Chat"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout> -->
+    </RelativeLayout>
+
+</RelativeLayout>

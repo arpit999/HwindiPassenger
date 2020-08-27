@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/help_faq_row_border" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/thumbnail_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/category_txt_faq"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@+id/thumbnail_icon"
+        android:gravity="center_vertical|left"
+        android:minHeight="50dp"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/category_txt_faq_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/category_txt_faq_questions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

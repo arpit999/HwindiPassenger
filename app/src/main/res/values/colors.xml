@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_bg_color">#000000</color>
+    <color name="btn_txt_color">#FFFFFF</color>
+
+    <!--<color name="editbox_text_color">#EFB421</color>-->
+
+    <color name="btn_launcher_bg_color">#FFFFFF</color>
+    <color name="btn_launcher_txt_color">#000000</color>
+    <color name="btn_launcher_hover_color">#C0C0C0</color>
+
+    <color name="btn_dialog_default_color">#EFB421</color>
+    <color name="btn_dialog_pressed_color">#99EFB421</color>
+    <color name="btn_dialog_hover_color">#44EFB421</color>
+    <color name="text_yellow">#EFB421</color>
+    <color name="text_hint">#99EFB421</color>
+    <color name="text_white">#F2F2F2</color>
+</resources>

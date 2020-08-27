@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    
+    <include android:id="@+id/toolbar_include"
+        layout="@layout/cutom_action_bar_user_profile"/>
+
+    <com.fonts.Text.MyTextView
+        android:id="@+id/content_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar_include"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="You can book a Taxi here."
+        android:textColor="#1C1C1C"
+        android:textSize="18sp" />
+    
+    <LinearLayout
+        android:id="@+id/linear_about_us_desc_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_include"
+        android:orientation="vertical"
+        android:padding="10dp" >
+    </LinearLayout>
+    
+    <ProgressBar
+        android:id="@+id/loading_aboutUs"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    
+    
+
+</RelativeLayout>

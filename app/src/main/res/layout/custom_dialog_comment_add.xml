@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/header_area"
+        android:layout_width="fill_parent"
+        android:layout_height="8.4mm"
+        android:background="@drawable/driver_page_your_logo_back" >
+
+        <ImageView
+            android:id="@+id/back_navigation_comment_add"
+            android:layout_width="10mm"
+            android:layout_height="7mm"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/navigation_back" />
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/back_navigation_comment_add"
+            android:text="COMMENT"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_code_are"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_area"
+        android:layout_marginTop="10dp"
+        android:padding="15dp" >
+
+        <com.fonts.Text.MyTextView
+            android:id="@+id/add_cmt_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Add Comment On Your Trip"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/CommentArea"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/add_cmt_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center" >
+
+            <com.fonts.Text.MyEditText
+                android:id="@+id/writeComment"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:hint="Please Write Comment..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RatingBar
+            android:id="@+id/ratingbar_default_add_comment"
+            style="@style/foodRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/CommentArea"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/btn_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingbar_default_add_comment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="20dp" >
+
+            <com.hwindiapp.passenger.RippleStyleButton
+                android:id="@+id/submit_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/btn_bg_color"
+                android:gravity="center"
+                android:minHeight="55dp"
+                android:text="OK"
+                android:textColor="@color/btn_txt_color"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
